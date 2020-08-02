@@ -27,7 +27,7 @@ jobs:
         pip install flake8 pytest wheel
         # for scipy needs
         pip install numpy==1.18.0
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        if [ -f requirements.txt ]; then pip install -r requirements.txt --use-feature=2020-resolver; fi
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
